@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MainEditor from './cad/MainEditor';
 import './MainContainer.css';
 
 // extending a basic react component (you can ignore this)
@@ -16,10 +17,11 @@ class MainContainer extends Component {
     console.log(this.props);
     return (
       <div>
-        <h2>{this.props.currentTab}</h2>
-        <a href="#" onClick={this.props.changeTab}>Change Tab</a>
-        {this.props.currentTab === 'one' && <div className="tab-one"><h2>This is tab One</h2></div>}
-        {this.props.currentTab === 'two' && <div className="tab-two"><h2>This is tab Two</h2></div>}
+        {this.props.currentTab === 'one' && <div className="tab tab-one">
+            <h2>This is tab One, with included editor</h2>
+            <MainEditor />
+          </div>}
+        {this.props.currentTab === 'two' && <div className="tab tab-two"><h2>This is tab Two</h2></div>}
       </div>
     );
   }

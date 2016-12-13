@@ -4,3 +4,6 @@
 .tab-two {
     background-color: blue;
 }
+.tab {
+    overflow: auto;
+}

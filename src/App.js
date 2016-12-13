@@ -34,8 +34,10 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Hi {this.state.user.name}, Current tab is {this.state.tab}</h2>
-          <a href="#" onClick={this.changeTab}>Change Tab</a>
+          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Hi {this.state.user.name}, Current tab is {this.state.tab}:</h2>
+          <h2><a href="#" onClick={this.changeTab}>Change Tab</a></h2>
         </div>
         <MainContainer currentTab={this.state.tab} changeTab={this.changeTab}></MainContainer>
       </div>
